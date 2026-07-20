@@ -82,7 +82,12 @@
             console.log(liste.innerHTML)
         }
 
-        function ajoutpoints(nom) {
+        function ajoutpoint(nom) {
+            listeJoeureuse.nom += 1;
+            getElementById(nom).innerHTML = listeJoeureuse[nom]
+            console.log(listeJoeureuse[nom])
+        }
+        function retirepoint(nom) {
             listeJoeureuse.nom += 1;
             getElementById(nom).innerHTML = listeJoeureuse[nom]
         }
