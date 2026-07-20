@@ -80,7 +80,7 @@
             console.log(Object.values(listeJoeureuse))
             
             var liste = document.getElementById("liste");
-            liste.innerHTML += "<li>" + nom + "<span id=" + nom + "> 0 </span><button onclick=\"ajoutpoint(" + nom + ")\"> +1 </button><button onclick=\"retirepoint(\"" + nom + "\")\"> -1 </button></li>";
+            liste.innerHTML += "<li>" + nom + "<span id=" + nom + "> 0 </span><button onclick=\"ajoutpoint(\""+nom+"\")\"> +1 </button><button onclick=\"retirepoint(\"" + nom + "\")\"> -1 </button></li>";
             console.log(liste.innerHTML)
         }
 
