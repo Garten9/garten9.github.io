@@ -72,8 +72,9 @@
         }
 
         function ajoutJoueureuse() {
-            var nom = document.getElementById("name").value;
-            listeJoeureuse.nom = 0;
+            const nom = document.getElementById("name").value;
+            // listeJoeureuse += {[nom]: 0};
+            listeJoeureuse[nom] = 0;
             console.log(nom)
             console.log(Object.keys(listeJoeureuse))
             console.log(Object.values(listeJoeureuse))
@@ -84,15 +85,15 @@
         }
 
         function ajoutpoint(nom) {
-            listeJoeureuse.nom += 1;
+            listeJoeureuse[nom] += 1;
             console.log(listeJoeureuse[nom])
             console.log(nom)
-            getElementById(nom).innerHTML = listeJoeureuse[nom];
+            document.getElementById(nom).innerHTML = listeJoeureuse[nom];
             console.log(listeJoeureuse[nom])
         }
         function retirepoint(nom) {
-            listeJoeureuse.nom += 1;
-            getElementById(nom).innerHTML = listeJoeureuse[nom];
+            listeJoeureuse.nom += -1;
+            document.getElementById(nom).innerHTML = listeJoeureuse[nom];
         }
     </script>
 
