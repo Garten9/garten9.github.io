@@ -47,17 +47,41 @@
 </head>
 <body>
 
+    
     <img id="randomImage" src="img/0.jpg" alt="Image aléatoire">
 
     <button onclick="nouvelleImage()">
         Nouvelle carte
     </button>
-
+    <div>
+            <input type="text" id="name" name="name" placeholder="Nom joueur.euse"/>
+            <button onclick="ajoutJoueureuse()">
+                Ajouter joeur.euse
+            </button>
+    </div>
+    <ul id="liste">
+        
+    </ul>
+    
     <script>
+        var listeJoeureuse = {}
         function nouvelleImage() {
             const img = document.getElementById("randomImage");
             img.src = "img/" + (Math.floor(Math.random() * 51) + 1) + ".jpg";
             console.log(img.src)
+        }
+
+        function ajoutJoeureuse() {
+            var nom = document.getElementById("name").value;
+            listeJoeureuse.nom = 0;
+            
+            const liste = document.getElementById("liste").innerHTML;
+            liste += "<li>" + nom + "<span id=" + nom + "> 0 </span><button onclick=\"ajoutpoint(" + nom + ")\"> +1 </button><button onclick=\"retirepoint(" + nom + ")\"> -1 </button></li>";
+        }
+
+        function ajoutpoints(nom) {
+            listeJoeureuse.nom += 1;
+            getElementById(nom).innerHTML = listeJoeureuse[nom]
         }
     </script>
 
