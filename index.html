@@ -43,6 +43,25 @@
         button:hover {
             background-color: #0056b3;
         }
+
+        .petit {
+            padding: 6px 12px;
+            font-size: 12px;
+            margin : 5px;
+        }
+
+        div {
+            margin: 20px;
+        }
+        input {
+            margin: 20px;
+        }
+        ul {
+            margin: 20px;
+        }
+        li {
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -55,7 +74,7 @@
     </button>
     <div>
             <input type="text" id="name" name="name" placeholder="Nom joueur.euse"/>
-            <button onclick="ajoutJoueureuse()">
+            <button class="petit" onclick="ajoutJoueureuse()">
                 Ajouter joeur.euse
             </button>
     </div>
@@ -80,7 +99,7 @@
             console.log(Object.values(listeJoeureuse))
             
             var liste = document.getElementById("liste");
-            liste.innerHTML += "<li>" + nom + "<span id=" + nom + "> 0 </span><button onclick=\"ajoutpoint(\'"+nom+"\')\"> +1 </button><button onclick=\"retirepoint(\'" + nom + "\')\"> -1 </button></li>";
+            liste.innerHTML += "<li>" + nom + "<span id=" + nom + "> 0 </span><button class=\"petit\" onclick=\"ajoutpoint(\'"+nom+"\')\"> +1 </button><button class=\"petit\" onclick=\"retirepoint(\'" + nom + "\')\"> -1 </button></li>";
             console.log(liste.innerHTML)
         }
 
