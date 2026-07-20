@@ -76,7 +76,7 @@
             listeJoeureuse.nom = 0;
             
             var liste = document.getElementById("liste").innerHTML;
-            liste += "<li>" + nom + "<span id=" + nom + "> 0 </span><button onclick=\"ajoutpoint(" + nom + ")\"> +1 </button><button onclick=\"retirepoint(" + nom + ")\"> -1 </button></li>";
+            liste.innerHTML += "<li>" + nom + "<span id=" + nom + "> 0 </span><button onclick=\"ajoutpoint(" + nom + ")\"> +1 </button><button onclick=\"retirepoint(" + nom + ")\"> -1 </button></li>";
         }
 
         function ajoutpoints(nom) {
