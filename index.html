@@ -80,7 +80,7 @@
             console.log(Object.values(listeJoeureuse))
             
             var liste = document.getElementById("liste");
-            liste.innerHTML += "<li>" + nom + "<span id=" + nom + "> 0 </span><button onclick=\"ajoutpoint(\'"+nom+"\')\"> +1 </button><button onclick=\"retirepoint(\"" + nom + "\")\"> -1 </button></li>";
+            liste.innerHTML += "<li>" + nom + "<span id=" + nom + "> 0 </span><button onclick=\"ajoutpoint(\'"+nom+"\')\"> +1 </button><button onclick=\"retirepoint(\'" + nom + "\')\"> -1 </button></li>";
             console.log(liste.innerHTML)
         }
 
@@ -88,11 +88,11 @@
             listeJoeureuse[x] += 1;
             console.log(listeJoeureuse[x])
             console.log(x)
-            document.getElementById(nom).innerHTML = listeJoeureuse[x];
+            document.getElementById(x).innerHTML = listeJoeureuse[x];
             console.log(listeJoeureuse[x])
         }
         function retirepoint(nom) {
-            listeJoeureuse.nom += -1;
+            listeJoeureuse[nom] += -1;
             document.getElementById(nom).innerHTML = listeJoeureuse[nom];
         }
     </script>
